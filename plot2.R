@@ -21,7 +21,11 @@ download.file(file_url,"./dataquiz1mod4/dataset.zip",method="libcurl")
 unzip("./dataquiz1mod4/dataset.zip",exdir="./dataquiz1mod4")
 file.remove("./dataquiz1mod4/dataset.zip")
 
+# Reading data set
+
 power <- read.table(file="./dataquiz1mod4/household_power_consumption.txt", sep=";", header=TRUE, colClasses=c("character","character","numeric","numeric","numeric","numeric","numeric","numeric","numeric"),na.strings="?", stringsAsFactors = FALSE)
+
+# Subsetting data for 1/2/2007 and 2/2/2007
 
 power7 <- power[power$Date %in% c("1/2/2007", "2/2/2007"),]
 

@@ -1,6 +1,7 @@
 # Load the required packages
 
 library(dplyr)
+library(reshape)
 
 # Create a directory to host the data set
 # If a directory with the same name exist, back it up
